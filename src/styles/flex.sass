@@ -1,0 +1,18 @@
+@import "sizing"
+
+@mixin flex-container
+  display: flex
+  align-items: center
+
+  & > .grow
+    flex-grow: 1
+
+.col
+  @include flex-container
+  @extend .w-100
+  flex-direction: column
+
+.row
+  @include flex-container
+  @extend .h-100
+  flex-direction: row

@@ -1,0 +1,34 @@
+@mixin space($char, $property, $name, $amount)
+  .#{$char}l-#{$name}
+    #{$property}-left: $amount
+
+  .#{$char}r-#{$name}
+    #{$property}-right: $amount
+
+  .#{$char}t-#{$name}
+    #{$property}-top: $amount
+
+  .#{$char}b-#{$name}
+    #{$property}-bottom: $amount
+
+  .#{$char}x-#{$name}
+    @extend .#{$char}l-#{$name}
+    @extend .#{$char}r-#{$name}
+
+  .#{$char}y-#{$name}
+    @extend .#{$char}t-#{$name}
+    @extend .#{$char}b-#{$name}
+
+  .#{$char}-#{$name}
+    @extend .#{$char}x-#{$name}
+    @extend .#{$char}y-#{$name}
+
+@mixin padding($name, $amount)
+  @include space("p", "padding", $name, $amount)
+
+@mixin margin($name, $amount)
+  @include space("m", "margin", $name, $amount)
+
+@for $size from 0 through 12
+  @include padding($size, $size * 0.25 em)
+  @include margin($size, $size * 0.25 em)

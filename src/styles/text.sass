@@ -1,0 +1,21 @@
+.bold
+  font-weight: 700
+
+.italic
+  font-style: italic
+
+.mono
+  font-family: "Fira Mono", monospace
+
+.noselect
+  user-select: none
+
+.retro
+  font-family: "VT323", monospace
+
+.sans
+  font-family: "Open Sans", monospace
+
+@each $pct in 25, 50, 100, 150, 200, 300, 400
+  .size-#{$pct}
+    font-size: $pct

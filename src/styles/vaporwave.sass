@@ -1,0 +1,42 @@
+@import "text"
+
+@keyframes vaporwave-flicker
+  0%
+    text-shadow: -.02em -.02em 0 #6BFFFF, .02em .02em 0 #FF819E
+    transform: scaleX(1.15)
+    filter: none
+  35%
+    text-shadow: -.02em -.02em 0 #6BFFFF, .02em .02em 0 #FF819E
+    transform: scaleX(1.15)
+    filter: none
+  36%
+    text-shadow: -0.1em -0.1em 0 #6BFFFF, 0.1em 0.1em 0 #FF819E
+    transform: scaleX(1.15) translateX(0.2em) scaleY(0.8)
+    filter: none
+  37%
+    text-shadow: 0.1em -0.1em 0 #6BFFFF, -0.1em 0.1em 0 #FF819E
+    transform: scaleX(1.15) translateX(-0.4em) scaleY(0.8)
+  38%
+    text-shadow: 0.1em 0.1em 0 #6BFFFF, -0.1em -0.1em 0 #FF819E
+    transform: scaleX(1.15) translateX(0.4em) scaleY(0.8)
+  39%
+    text-shadow: -.02em -.02em 0 #6BFFFF, .02em .02em 0 #FF819E
+    transform: scaleX(1.15)
+    filter: none
+  100%
+    text-shadow: -.02em -.02em 0 #6BFFFF, .02em .02em 0 #FF819E
+    transform: scaleX(1.15)
+    filter: none
+
+.vaporwave-title
+  @extend .bold
+  @extend .noselect
+  @extend .retro
+
+  letter-spacing: 0.1em
+  transform: scaleX(1.15)
+  color: white
+  text-shadow: -.02em -.02em 0 #6BFFFF, .02em .02em 0 #FF819E
+
+  &.flicker
+    animation: vaporwave-flicker 4s steps(1) infinite

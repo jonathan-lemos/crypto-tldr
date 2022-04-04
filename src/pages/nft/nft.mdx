@@ -1,0 +1,35 @@
+import Page from "../../layouts/page";
+
+# NFT's
+
+At a high level, an NFT (non-fungible token) is a *distinct* virtual "thing" that can be bought and sold.
+This is opposed to a "fungible token" i.e. currency, where each token is identical to any other token of its kind.
+A vast majority of NFT's are just hyperlinks to images, but they can theoretically be much more than that.
+
+
+## How do they work?
+
+NFT's on Ethereum are implemented as a smart contract (basically a service that runs on the blockchain) that has the following traits:
+
+1. It keeps track of which token ID is owned by which address and vice versa.
+    * A token ID is technically just a number, and by extension, an NFT is technically just a number that the contract says belongs to an address.
+    * For developers, think of this part as a `HashMap<int, address>` and a `HashMap<address, int[]>`.
+2. It allows you (or a third party that you approve e.g. OpenSea) to transfer your token ID to another address.
+3. It has a function that takes in a token ID and returns a link to that NFT's metadata (image link, attributes, etc.).
+    * For developers, this function takes an `int` and returns a JSON `string`.
+
+<Link to="/nft/creating">Here</Link> is a more in-depth guide on the creation of NFT's on Ethereum. NFT's on other chains are implemented similarly.
+
+
+## How do I make money off this?
+
+**TL;DR: You don't**
+
+If you're looking for a guaranteed method to get rich quick with minimal effort off NFT's, keep looking.
+
+If you instead want to understand why you keep losing money on NFT's, <Link to="/nft/investing">this is why</Link>.
+
+If you want to take the smart approach and sell NFT's instead of buying them, <Link to="/nft/creating">here's how</Link>.
+
+
+export default Page;
